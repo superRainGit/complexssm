@@ -1,0 +1,159 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>zc.zhang.complexssm</groupId>
+	<artifactId>complexssm</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<cn.zhang.sprig.version>4.3.8.RELEASE</cn.zhang.sprig.version>
+		<cn.zhang.log4j.version>1.2.17</cn.zhang.log4j.version>
+		<cn.zhang.mybatis.version>3.4.1</cn.zhang.mybatis.version>
+		<cn.zhang.mybatis-spring.version>1.3.1</cn.zhang.mybatis-spring.version>
+		<cn.zhang.mysqlconnector.version>5.1.6</cn.zhang.mysqlconnector.version>
+		<cn.zhang.druid.version>1.0.29</cn.zhang.druid.version>
+		<cn.zhang.junit.version>4.12</cn.zhang.junit.version>
+		<cn.zhang.servlet-api.version>3.0.1</cn.zhang.servlet-api.version>
+		<cn.zhang.jstl.version>1.2</cn.zhang.jstl.version>
+		<cn.zhang.spring.test.version>4.3.8.RELEASE</cn.zhang.spring.test.version>
+		<cn.zhang.aspectJ.version>1.8.9</cn.zhang.aspectJ.version>
+		<cn.zhang.pageHelper.version>4.1.6</cn.zhang.pageHelper.version>
+		<cn.zhang.jackson.version>2.8.7</cn.zhang.jackson.version>
+		<cn.zhang.hibernate.validator.version>5.2.4.Final</cn.zhang.hibernate.validator.version>
+		<cn.zhang.fastjson.version>1.2.24</cn.zhang.fastjson.version>
+	</properties>
+
+	<dependencies>
+		<!-- 引入SpringMVC的web模块 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${cn.zhang.sprig.version}</version>
+		</dependency>
+		<!-- 为了Spring的事务控制引入的jdbc模块 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${cn.zhang.sprig.version}</version>
+		</dependency>
+		<!-- 直接用于记录日志的log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${cn.zhang.log4j.version}</version>
+		</dependency>
+		<!-- mybatis的jar包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${cn.zhang.mybatis.version}</version>
+		</dependency>
+		<!-- 导入mybatis和spring关联的Jar包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${cn.zhang.mybatis-spring.version}</version>
+		</dependency>
+		<!-- 数据块驱动的jar -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${cn.zhang.mysqlconnector.version}</version>
+		</dependency>
+		<!-- 配置Alibaba的Druid数据源 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${cn.zhang.druid.version}</version>
+		</dependency>
+		<!-- 配置用于简单测试的junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${cn.zhang.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- 配置Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${cn.zhang.servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 此处不使用2.5版本的Servlet是因为想要使用SpringMVC提供的MockMvc进行测试 那么就需要Servlet3以上的版本 -->
+		<!-- <dependency> -->
+		<!-- <groupId>javax.servlet</groupId> -->
+		<!-- <artifactId>servlet-api</artifactId> -->
+		<!-- <version>${cn.zhang.servlet-api.version}</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- 配置JSTL -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${cn.zhang.jstl.version}</version>
+		</dependency>
+		<!-- 配置Spring的测试的Jar包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${cn.zhang.spring.test.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- 引入AspectJ的Jar包 -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${cn.zhang.aspectJ.version}</version>
+		</dependency>
+		<!-- 引入通用的分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>${cn.zhang.pageHelper.version}</version>
+		</dependency>
+		<!-- 配置jackson @ResponseBody注解需要使用 -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${cn.zhang.jackson.version}</version>
+		</dependency>
+		<!-- 数据JSR303校验 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${cn.zhang.hibernate.validator.version}</version>
+		</dependency>
+		<!-- 配置ALIBABA FASTJSON Jar包 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${cn.zhang.fastjson.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>/complexssm</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.6.v20170531</version>
+				<configuration>
+					<scanIntervalSeconds>1</scanIntervalSeconds>
+					<connectors>
+						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+							<port>8080</port>
+						</connector>
+					</connectors>
+					<webApp>
+						web项目的根路径
+						<contextPath>/</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
