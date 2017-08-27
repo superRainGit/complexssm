@@ -127,11 +127,7 @@
 	<!-- 显示整个页面数据的总页面 -->
 	<div class="container">
 		<div class="row">
-			<h1 class="col-md-10">员工信息</h1>
-			<div class="col-md-2">
-				<a href="login?locale=zh_CN" class="btn btn-default btn-sm active" id="toChina">中文</a>
-				<a href="login?locale=en_US" class="btn btn-default btn-sm active" id="toEnglish">英文</a>
-			</div>
+			<h1 class="col-md-12">员工信息</h1>
 		</div>
 		<div class="row">
 			<div class="col-md-2 col-md-offset-10">
