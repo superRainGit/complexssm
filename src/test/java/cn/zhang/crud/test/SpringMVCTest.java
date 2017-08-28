@@ -34,13 +34,13 @@ public class SpringMVCTest {
 	private static final Logger logger = LogManager.getLogger(SpringMVCTest.class.getName());
 
 	/**
-	 * 浼犲叆SpringMVC鐨処OC瀹瑰櫒   濡傛灉鎯宠鑳借嚜鍔ㄦ敞鍏OC瀹瑰櫒  閭ｄ箞灏遍渶瑕佷娇鐢� @WebAppConfiguration
+	 * 如果想要直接注入 SpringMVC 自己的IOC容器 需要使用 @WebAppConfiguration 注解
 	 */
 	@Autowired
 	private WebApplicationContext context;
 	
 	/**
-	 * 鐢ㄦ潵妯℃嫙鍙戦�丼pringMVC璇锋眰
+	 * 使用 MockMvc 此对象时SpringMVC提供的一个模拟发送请求的实例
 	 */
 	private MockMvc mockMvc;
 	
